@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class SurveyAnswer extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['id','survey_id','start_date','end_date','created_at','updated_at'];
 }
