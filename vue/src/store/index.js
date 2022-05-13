@@ -1,6 +1,6 @@
 import { createStore } from "vuex";
 
-const store = createStore({
+export default createStore({
   state: {
     user: {
       data: {
@@ -14,8 +14,12 @@ const store = createStore({
   },
   getters: {},
   actions: {},
-  mutations: {},
+  mutations: {
+    logout: state => {
+      state.user.data = {};
+      state.user.token = null;
+    }
+  },
   modules: {}
 })
 
-export default store;
